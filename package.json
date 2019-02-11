@@ -1,0 +1,28 @@
+{
+  "name": "core",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">= 6"
+  },
+  "scripts": {
+    "dev": "tsc -b --watch packages/core packages/core-common packages/core-node packages/core-types packages/core-web",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajaxlab7@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dynamic-packages/core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dynamic-packages/core/issues"
+  },
+  "homepage": "https://github.com/dynamic-packages/core#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.24",
+    "typescript": "^3.3.3"
+  }
+}

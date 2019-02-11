@@ -1,0 +1,15 @@
+{
+  "name": "@dynamics/core-node",
+  "version": "0.1.0",
+  "description": "Node module for @dynamic/core",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajaxlab7@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@dynamics/core-common": "^0.0.1",
+    "@dynamics/core-types": "^0.1.0"
+  }
+}

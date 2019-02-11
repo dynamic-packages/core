@@ -1,0 +1,12 @@
+{
+  "name": "@dynamics/core-types",
+  "version": "0.1.0",
+  "description": "Types for @dynamic/core",
+  "module": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajaxlab7@gmail.com",
+  "license": "MIT"
+}
