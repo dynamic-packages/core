@@ -8,7 +8,7 @@
     "node": ">= 6"
   },
   "scripts": {
-    "dev": "tsc -b --watch packages/core packages/core-common packages/core-node packages/core-types packages/core-web",
+    "dev": "tsc -b --watch packages/core-types/tsconfig.esm.json packages/core-common/tsconfig.esm.json packages/core-node/tsconfig.esm.json  packages/core-web/tsconfig.esm.json packages/core/tsconfig.esm.json packages/core-types/tsconfig.cjs.json packages/core-common/tsconfig.cjs.json packages/core-node/tsconfig.cjs.json packages/core-web/tsconfig.cjs.json packages/core/tsconfig.cjs.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ajaxlab7@gmail.com",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/dynamic-packages/core#readme",
   "devDependencies": {
     "@types/node": "^10.12.24",
+    "tslib": "^1.9.3",
     "typescript": "^3.3.3"
   }
 }

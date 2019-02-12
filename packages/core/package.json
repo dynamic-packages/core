@@ -2,7 +2,9 @@
   "name": "@dynamics/core",
   "version": "0.1.0",
   "description": "A core dynamic package which manages dynamic packages' life-cycle",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,9 +27,9 @@
   },
   "homepage": "https://github.com/dynamic-packages/core#readme",
   "dependencies": {
-    "@dynamics/core-common": "^0.0.1",
-    "@dynamics/core-node": "^0.0.1",
+    "@dynamics/core-common": "^0.1.0",
+    "@dynamics/core-node": "^0.1.0",
     "@dynamics/core-types": "^0.1.0",
-    "@dynamics/core-web": "^0.0.1"
+    "@dynamics/core-web": "^0.1.0"
   }
 }
