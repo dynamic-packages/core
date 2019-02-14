@@ -4,7 +4,7 @@
   "description": "A core dynamic package which manages dynamic packages' life-cycle",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +30,7 @@
     "@dynamics/core-common": "^0.1.0",
     "@dynamics/core-node": "^0.1.0",
     "@dynamics/core-types": "^0.1.0",
-    "@dynamics/core-web": "^0.1.0"
+    "@dynamics/core-web": "^0.1.0",
+    "tslib": "^1.9.3"
   }
 }

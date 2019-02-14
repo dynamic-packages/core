@@ -1,0 +1,10 @@
+{
+    "files": [],
+    "references": [
+        { "path": "../packages/core-types/tsconfig.cjs.json" },
+        { "path": "../packages/core-common/tsconfig.cjs.json" },
+        { "path": "../packages/core-node/tsconfig.cjs.json" },
+        { "path": "../packages/core-web/tsconfig.cjs.json" },
+        { "path": "../packages/core/tsconfig.cjs.json" }
+    ]
+}

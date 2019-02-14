@@ -4,10 +4,13 @@
   "description": "Types for @dynamic/core",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.js",
+  "types": "dist/types/index.d.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ajaxlab7@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^1.9.3"
+  }
 }

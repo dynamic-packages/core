@@ -1,0 +1,10 @@
+{
+    "files": [],
+    "references": [
+        { "path": "../packages/core-types/tsconfig.esm.json" },
+        { "path": "../packages/core-common/tsconfig.esm.json" },
+        { "path": "../packages/core-node/tsconfig.esm.json" },
+        { "path": "../packages/core-web/tsconfig.esm.json" },
+        { "path": "../packages/core/tsconfig.esm.json" }
+    ]
+}
