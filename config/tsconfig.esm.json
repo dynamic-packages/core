@@ -1,10 +1,10 @@
 {
-    "files": [],
-    "references": [
-        { "path": "../packages/core-types/config/tsconfig.esm.json" },
-        { "path": "../packages/core-common/config/tsconfig.esm.json" },
-        { "path": "../packages/core-node/config/tsconfig.esm.json" },
-        { "path": "../packages/core-web/config/tsconfig.esm.json" },
-        { "path": "../packages/core/config/tsconfig.esm.json" }
-    ]
+  "files": [],
+  "references": [
+    { "path": "../packages/core-types/config/tsconfig.esm.json" },
+    { "path": "../packages/core-common/config/tsconfig.esm.json" },
+    { "path": "../packages/core-node/config/tsconfig.esm.json" },
+    { "path": "../packages/core-web/config/tsconfig.esm.json" },
+    { "path": "../packages/core/config/tsconfig.esm.json" }
+  ]
 }

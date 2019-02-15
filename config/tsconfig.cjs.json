@@ -1,10 +1,10 @@
 {
-    "files": [],
-    "references": [
-        { "path": "../packages/core-types/config/tsconfig.cjs.json" },
-        { "path": "../packages/core-common/config/tsconfig.cjs.json" },
-        { "path": "../packages/core-node/config/tsconfig.cjs.json" },
-        { "path": "../packages/core-web/config/tsconfig.cjs.json" },
-        { "path": "../packages/core/config/tsconfig.cjs.json" }
-    ]
+  "files": [],
+  "references": [
+    { "path": "../packages/core-types/config/tsconfig.cjs.json" },
+    { "path": "../packages/core-common/config/tsconfig.cjs.json" },
+    { "path": "../packages/core-node/config/tsconfig.cjs.json" },
+    { "path": "../packages/core-web/config/tsconfig.cjs.json" },
+    { "path": "../packages/core/config/tsconfig.cjs.json" }
+  ]
 }
