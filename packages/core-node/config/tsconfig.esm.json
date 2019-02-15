@@ -1,0 +1,15 @@
+{
+  "extends": "../../../config/tsconfig.base.esm",
+  "compilerOptions": {
+    "declarationDir": "../dist/types",
+    "outDir": "../dist/esm",                  /* Redirect output structure to the directory. */
+    "rootDir": "../src"                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+  },
+  "references": [
+    { "path": "../../core-types/config/tsconfig.esm.json" },
+    { "path": "../../core-common/config/tsconfig.esm.json" }
+  ],
+  "include": [
+    "../src/**/*"
+  ]
+}
