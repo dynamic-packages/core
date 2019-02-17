@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "../packages/core-types/config/tsconfig.amd.json" },
+    { "path": "../packages/core-common/config/tsconfig.amd.json" },
+    { "path": "../packages/core-node/config/tsconfig.amd.json" },
+    { "path": "../packages/core-web/config/tsconfig.amd.json" },
+    { "path": "../packages/core/config/tsconfig.amd.json" }
+  ]
+}

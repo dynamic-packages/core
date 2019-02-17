@@ -9,6 +9,7 @@
   },
   "scripts": {
     "clean": "rimraf packages/**/dist",
+    "dev:amd": "tsc -b --watch config/tsconfig.amd.json",
     "dev:cjs": "tsc -b --watch config/tsconfig.cjs.json",
     "dev:esm": "tsc -b --watch config/tsconfig.esm.json",
     "test": "echo \"Error: no test specified\" && exit 1"

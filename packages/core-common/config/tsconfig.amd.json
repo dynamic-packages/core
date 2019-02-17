@@ -1,0 +1,13 @@
+{
+  "extends": "../../../config/tsconfig.base.amd",
+  "compilerOptions": {
+    "outFile": "../dist/amd/index.js",        /* Concatenate and emit output to single file. */
+    "rootDir": "../src"                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+  },
+  "references": [
+    { "path": "../../core-types/config/tsconfig.esm.json" }
+  ],
+  "include": [
+    "../src/**/*"
+  ]
+}

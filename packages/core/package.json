@@ -4,7 +4,7 @@
   "description": "A core dynamic package which manages dynamic packages' life-cycle",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "browser": "dist/umd/dynamic.js",
+  "browser": "dist/amd/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "dev:umd": "rollup -c config/rollup.umd.js",
