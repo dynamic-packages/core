@@ -12,7 +12,7 @@
     "dev:amd": "tsc -b --watch config/tsconfig.amd.json",
     "dev:cjs": "tsc -b --watch config/tsconfig.cjs.json",
     "dev:esm": "tsc -b --watch config/tsconfig.esm.json",
-    "test:dev": "cross-env TS_NODE_PROJECT=config/tsconfig.spec.json mocha --opts mocha.opts -w"
+    "test:dev": "mocha --opts mocha.opts -w"
   },
   "author": "ajaxlab7@gmail.com",
   "license": "MIT",
@@ -29,7 +29,6 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^10.12.24",
     "chai": "^4.2.0",
-    "cross-env": "^5.2.0",
     "mocha": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^8.0.2",
