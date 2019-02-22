@@ -1,4 +1,5 @@
 import { Base } from '@dynamics/core-common';
+import packageJson from '../../package.json';
 
 class Runtime extends Base {
 
