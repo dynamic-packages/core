@@ -12,6 +12,7 @@
     "dev:amd": "tsc -b --watch config/tsconfig.amd.json",
     "dev:cjs": "tsc -b --watch config/tsconfig.cjs.json",
     "dev:esm": "tsc -b --watch config/tsconfig.esm.json",
+    "lint": "tslint 'packages/**/src/**/*.ts' 'packages/**/spec/**/*.ts'",
     "test:dev": "mocha --opts mocha.opts -w"
   },
   "author": "ajaxlab7@gmail.com",
@@ -32,6 +33,8 @@
     "mocha": "^5.2.0",
     "rimraf": "^2.6.2",
     "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-lines-between-class-members": "^1.3.1",
     "typescript": "^3.3.3"
   },
   "dependencies": {}
