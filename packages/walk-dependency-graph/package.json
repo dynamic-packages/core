@@ -1,0 +1,20 @@
+{
+  "name": "walk-dependency-graph",
+  "version": "0.1.0",
+  "description": "Walk a Node.js package's dependency graph using Node.js module resolution algorithm",
+  "main": "dist/cjs/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "node_modules",
+    "dependency",
+    "graph"
+  ],
+  "author": "ajaxlab7@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dynamic-packages/core.git"
+  }
+}
