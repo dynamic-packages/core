@@ -2,10 +2,9 @@
   "name": "walk-dependency-graph",
   "version": "0.1.0",
   "description": "Walk a Node.js package's dependency graph using Node.js module resolution algorithm",
-  "main": "dist/cjs/index.js",
-  "scripts": {
-    "test": "mocha"
-  },
+  "main": "dist/cjs/walkDependencyGraph.js",
+  "module": "dist/esm/walkDependencyGraph.js",
+  "types": "dist/types/walkDependencyGraph.d.ts",
   "keywords": [
     "node_modules",
     "dependency",
