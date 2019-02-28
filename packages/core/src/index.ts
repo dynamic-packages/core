@@ -1,7 +1,11 @@
+import { IRuntimeProjectConfig } from '@dynamics/core-types';
 import Runtime from './boot/Runtime';
 
-function loadDynamicPackages(runtimeConfig: any) {
+/**
+ * Starts dynamic.js runtime with the given config
+ */
+function dynamic(runtimeConfig: IRuntimeProjectConfig) {
   (new Runtime(runtimeConfig)).start();
 }
 
-export default loadDynamicPackages;
+export default dynamic;
