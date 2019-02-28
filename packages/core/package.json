@@ -7,7 +7,7 @@
   "browser": "dist/amd/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "dev:amd": "rollup -c config/rollup.amd.js",
+    "dev:amd": "rollup -c config/rollup.amd.js -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
