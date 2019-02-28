@@ -1,7 +1,13 @@
 import { IBase, IFlag } from '../common';
 
-export interface IDynamicPackage extends IFlag {
+export type IPackageResolveHandler = (pkg: IDynamicPackage) => void;
 
+export interface IDynamicPackage extends IFlag {
+  // TODO
+}
+
+export interface IPackageNode {
+  children: IPackageNode[];
 }
 
 export interface IPackageManager extends IBase {
@@ -9,4 +15,9 @@ export interface IPackageManager extends IBase {
   install(pkg: IDynamicPackage): void;
   uninstall(pkg: IDynamicPackage): void;
   update(pkg: IDynamicPackage): void;
+}
+
+export interface IPackageResolver {
+  onResolve(handler: IPackageResolveHandler): void;
+  resolve(): Promise<IPackageNode>;
 }
