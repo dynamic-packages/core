@@ -10,13 +10,13 @@
       "name": "Mocha Tests",
       "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
       "args": [
-        "-u",
-        "tdd",
         "--timeout",
         "999999",
         "--colors",
-        "--require", "ts-node/register",
-        "--recursive", "packages/**/spec/**/*.spec.ts"
+        "--require",
+        "ts-node/register",
+        "--recursive",
+        "packages/**/spec/**/*.spec.ts"
       ],
       "internalConsoleOptions": "openOnSessionStart"
     }

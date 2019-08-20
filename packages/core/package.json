@@ -33,15 +33,15 @@
     "@dynamics/core-node": "^0.1.0",
     "@dynamics/core-types": "^0.1.0",
     "@dynamics/core-web": "^0.1.0",
-    "tslib": "^1.9.3"
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
-    "rollup": "^1.1.2",
-    "rollup-plugin-buble": "^0.19.6",
-    "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-license": "^0.8.1",
+    "rollup": "^1.19.4",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-license": "^0.12.1",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.2"
   }
 }
