@@ -4,8 +4,6 @@ import Runtime from './boot/Runtime';
 /**
  * Starts dynamic.js runtime with the given config
  */
-function dynamic(runtimeConfig: IRuntimeProjectConfig) {
+export function dynamic(runtimeConfig: IRuntimeProjectConfig) {
   (new Runtime(runtimeConfig)).start();
 }
-
-export default dynamic;
