@@ -1,5 +1,9 @@
 import Logger from './Logger';
+import logger from './singleton';
+import trace from './trace';
 
 export {
-  Logger
+  logger,
+  Logger,
+  trace
 };

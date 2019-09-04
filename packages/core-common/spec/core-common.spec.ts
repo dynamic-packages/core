@@ -1,6 +1,7 @@
 import { LoggerLevel, RuntimeEnv } from '@dynamics/core-types';
 import { expect } from 'chai';
-import { getRuntimeEnv, Logger } from '../src';
+import { getRuntimeEnv, Logger, trace } from '../src';
+import singleton from '../src/logger/singleton';
 
 describe('@dynamics/core-common', function () {
 
@@ -76,6 +77,41 @@ describe('@dynamics/core-common', function () {
         logger.debug(13, 14, 15);
         logger.silly(16, 17, 18);
         expect(argsRecord).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+      });
+
+    });
+
+    describe('trace', function () {
+
+      it('traces input and out of a method', function () {
+        const argsRecord: any[] = [];
+        singleton.level = LoggerLevel.silly;
+        singleton.printer = {
+          print(date, level, args) {
+            if (args) {
+              argsRecord.push(...args);
+            }
+          }
+        };
+
+        class Test {
+          @trace
+          test(a: number, b: number) {
+            return a + b;
+          }
+
+          toString() {
+            return '<Test>';
+          }
+        }
+        const test = new Test();
+        test.test(10, 20);
+
+        const correctRecord = [
+          '{0} {1}({2}) called', '<Test>', 'test', [10, 20],
+          '{0} {1}({2}) => {3}', '<Test>', 'test', [10, 20], 30
+        ];
+        expect(argsRecord).to.deep.equal(correctRecord);
       });
 
     });

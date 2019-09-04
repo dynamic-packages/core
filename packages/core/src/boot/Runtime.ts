@@ -1,4 +1,4 @@
-import { Base, getRuntimeEnv } from '@dynamics/core-common';
+import { Base, getRuntimeEnv, trace } from '@dynamics/core-common';
 import { IRuntimeProjectConfig, RuntimeEnv } from '@dynamics/core-types';
 
 class Runtime extends Base {
@@ -12,6 +12,7 @@ class Runtime extends Base {
     this._runtimeConfig = runtimeConfig;
   }
 
+  @trace
   start() {
     // TODO cache graph
   }
