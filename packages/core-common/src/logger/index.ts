@@ -1,5 +1,5 @@
 import Logger from './Logger';
-import logger from './singleton';
+import { logger } from './singleton';
 import trace from './trace';
 
 export {

@@ -1,7 +1,12 @@
 import { LoggerLevel, RuntimeEnv } from '@dynamics/core-types';
 import { expect } from 'chai';
+import sinon from 'sinon';
 import { getRuntimeEnv, Logger, trace } from '../src';
-import singleton from '../src/logger/singleton';
+import * as loggerModule from '../src/logger/singleton';
+
+afterEach(() => {
+  sinon.restore();
+});
 
 describe('@dynamics/core-common', function () {
 
@@ -83,16 +88,24 @@ describe('@dynamics/core-common', function () {
 
     describe('trace', function () {
 
-      it('traces input and out of a method', function () {
+      beforeEach(() => {
+        // console.info('beforeEach');
+      });
+
+      it('traces input and output of a method', function () {
         const argsRecord: any[] = [];
-        singleton.level = LoggerLevel.silly;
-        singleton.printer = {
-          print(date, level, args) {
-            if (args) {
-              argsRecord.push(...args);
+        sinon.stub(loggerModule, 'logger').value((() => {
+          const mockLogger = new Logger();
+          mockLogger.level = LoggerLevel.silly;
+          mockLogger.printer = {
+            print(date, level, args) {
+              if (level === LoggerLevel.debug && args) {
+                argsRecord.push(...args);
+              }
             }
-          }
-        };
+          };
+          return mockLogger;
+        })());
 
         class Test {
           @trace
@@ -105,8 +118,8 @@ describe('@dynamics/core-common', function () {
           }
         }
         const test = new Test();
-        test.test(10, 20);
 
+        test.test(10, 20);
         const correctRecord = [
           '{0} {1}({2}) called', '<Test>', 'test', [10, 20],
           '{0} {1}({2}) => {3}', '<Test>', 'test', [10, 20], 30

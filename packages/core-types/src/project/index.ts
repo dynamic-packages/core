@@ -1,15 +1,21 @@
+import { LoggerLevel } from '../logger';
+
+interface ILogConfig {
+  level: LoggerLevel;
+}
+
+interface IPackageConfig {
+  ignored: string[];
+  startup: string[];
+  stopped: string[];
+}
+
 export interface IProjectConfig {
-  packages: {
-    ignored: string[],
-    startup: string[],
-    stopped: string[]
-  };
+  log: ILogConfig;
+  packages: IPackageConfig;
 }
 
 export interface IRuntimeProjectConfig {
-  packages?: {
-    ignored: string[],
-    startup: string[],
-    stopped: string[]
-  };
+  log?: ILogConfig;
+  packages?: IPackageConfig;
 }

@@ -1,4 +1,4 @@
-import logger from './singleton';
+import { logger } from './singleton';
 
 export default function trace(T: any, method: string, desc: PropertyDescriptor) {
   return {

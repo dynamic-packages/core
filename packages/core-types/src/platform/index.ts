@@ -1,7 +1,7 @@
 export enum RuntimeEnv {
   NODE = 'node',
   UNKNOWN = 'unknown',
-  WEB = 'web'
+  WEB = 'web',
 }
 
 export interface IEsModule {

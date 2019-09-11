@@ -30,6 +30,7 @@
     "only-arrow-functions": false,
     "ordered-imports": true,
     "quotemark": [true, "single", "avoid-escape"],
+    "semicolon": [true, "always"],
     "space-before-function-paren": [true, {
       "anonymous": "always"
     }],
