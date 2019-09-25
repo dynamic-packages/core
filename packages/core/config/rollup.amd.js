@@ -6,6 +6,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import { uglify } from 'rollup-plugin-uglify';
 
 export default {
+  context: 'window',
   input: 'dist/esm/index.js',
   output: {
     file: 'dist/amd/index.min.js',
@@ -24,7 +25,9 @@ export default {
     uglify(),
     license({
       banner: {
-        file: 'config/LICENSE'
+        content: {
+          file: 'config/LICENSE'
+        }
       }
     })
   ]
