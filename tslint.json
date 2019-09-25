@@ -5,6 +5,7 @@
   ],
   "rules": {
     "align": [true, "elements", "members", "statements"],
+    "curly": [true, "ignore-same-line"],
     "eofline": true,
     "lines-between-class-members": [true, 1],
     "member-access": [true, "no-public"],
