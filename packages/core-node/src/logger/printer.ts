@@ -1,4 +1,4 @@
-import { argsToStr, strFormat } from '@dynamics/core-common';
+import { strFormat, toString } from '@dynamics/core-common';
 import { ILogPrinter, LoggerLevel } from '@dynamics/core-types';
 import chalk from 'chalk';
 import { Spinner } from 'cli-spinner';
@@ -14,25 +14,23 @@ const COLOR = {
 };
 
 let spinner: Spinner | null = null;
-const prompt = chalk.cyan('dyanmic');
+const prompt = chalk.cyan('dynamic');
 const datePrefix = chalk.white('[');
 const dateSuffix = chalk.white(']');
 
 function formatDate(date: Date) {
-  const time = chalk.gray(
-    date.getHours().toString().padStart(2, '0') + ':'
+  const time = date.getHours().toString().padStart(2, '0') + ':'
     + date.getMinutes().toString().padStart(2, '0') + ':'
     + date.getSeconds().toString().padStart(2, '0') + ' '
-    + date.getMilliseconds().toString().padStart(3, '0')
-  );
-  return datePrefix + time + dateSuffix;
+    + date.getMilliseconds().toString().padStart(3, '0');
+  return datePrefix + chalk.gray(time) + dateSuffix;
 }
 
 function formatArgs(level: LoggerLevel, args: any[]): string {
   const _args = [];
   const len = args.length;
   for (let i = 0; i < len; i++) {
-    _args[i] = argsToStr(args[i], false);
+    _args[i] = toString(args[i], false);
   }
   return COLOR[level](strFormat(..._args));
 }
@@ -41,7 +39,7 @@ function spreadArgs(level: LoggerLevel, args: any[]) {
   const _args = [];
   const len = args.length;
   for (let i = 0; i < len; i++) {
-    _args[i] = argsToStr(args[i], true, true);
+    _args[i] = toString(args[i], true, true);
   }
   return COLOR[level](_args.join(', '));
 }

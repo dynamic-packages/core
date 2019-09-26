@@ -1,5 +1,7 @@
-import argsToStr from './argsToStr';
+import spreadArray from './spreadArray';
+import toString from './toString';
 
 export {
-  argsToStr
+  spreadArray,
+  toString
 };

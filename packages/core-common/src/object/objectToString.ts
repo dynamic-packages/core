@@ -28,26 +28,26 @@ function flatten(obj: any) {
   return '{' + items.join(', ') + '}';
 }
 
-export default function stringify(arg: IKeyValue, flat: boolean = false): string {
+export default function objectToString(
+  arg: IKeyValue,
+  flat: boolean = false
+): string {
   const type = typeof arg;
   if (!arg || type !== 'object') {
     return arg + '';
   }
-  if (type === 'object') {
+  const argStr = arg.toString();
+  if (argStr === '[object Object]') {
     try {
       return flat ? flatten(arg) : json(arg);
     } catch (e) {
-      const valueStringfied = Object.keys(arg)
+      const oneDepthObject = Object.keys(arg)
         .reduce((acc: IKeyValue, key) => {
           acc[key] = arg[key] + '';
           return acc;
         }, {});
-      return flat ? flatten(valueStringfied) : json(valueStringfied);
+      return flat ? flatten(oneDepthObject) : json(oneDepthObject);
     }
-  }
-  const argStr = arg.toString();
-  if (argStr === '[object Object]') {
-    return `<${arg.constructor.name}>`;
   }
   return argStr;
 }

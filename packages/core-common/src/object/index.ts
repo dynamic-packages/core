@@ -1,5 +1,5 @@
-import stringify from './stringify';
+import objectToString from './objectToString';
 
 export {
-  stringify
+  objectToString
 };
