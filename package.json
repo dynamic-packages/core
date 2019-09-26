@@ -8,6 +8,9 @@
     "node": ">= 6"
   },
   "scripts": {
+    "build:amd": "tsc -b config/tsconfig.amd.json",
+    "build:cjs": "tsc -b config/tsconfig.cjs.json",
+    "build:esm": "tsc -b config/tsconfig.esm.json",
     "clean": "rimraf packages/**/dist",
     "dev:amd": "tsc -b --watch config/tsconfig.amd.json",
     "dev:cjs": "tsc -b --watch config/tsconfig.cjs.json",
