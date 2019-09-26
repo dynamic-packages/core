@@ -121,8 +121,8 @@ describe('@dynamics/core-common', function () {
 
         test.test(10, 20);
         const correctRecord = [
-          '{0} {1}({2}) called', '<Test>', 'test', [10, 20],
-          '{0} {1}({2}) => {3}', '<Test>', 'test', [10, 20], 30
+          '{0} {1}({2}) called', '<Test>', 'test', '10, 20', '%format',
+          '{0} {1}({2}) => {3}', '<Test>', 'test', '10, 20', 30, '%format'
         ];
         expect(argsRecord).to.deep.equal(correctRecord);
       });
