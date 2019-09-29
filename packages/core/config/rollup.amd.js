@@ -10,7 +10,8 @@ export default {
   input: 'dist/esm/index.js',
   output: {
     file: 'dist/amd/index.min.js',
-    format: 'amd'
+    format: 'amd',
+    sourcemap: true
   },
   external: [
     '@dynamics/core-node'
