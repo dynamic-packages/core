@@ -20,6 +20,10 @@ class Runtime extends Base {
     // TODO cache graph
   }
 
+  toString() {
+    return '<Runtime>';
+  }
+
   private _configLog(runtimeConfig: IRuntimeProjectConfig) {
     const { _env } = this;
     const { log } = runtimeConfig;
