@@ -10,12 +10,26 @@ interface IPackageConfig {
   stopped: string[];
 }
 
+export interface IProject {
+  getConfig: () => IProjectConfig;
+}
+
 export interface IProjectConfig {
   log: ILogConfig;
-  packages: IPackageConfig;
+  package: IPackageConfig;
+  path: IProjectPathConfig;
+}
+
+export interface IProjectPathConfig {
+  root: string;
 }
 
 export interface IRuntimeProjectConfig {
   log?: ILogConfig;
-  packages?: IPackageConfig;
+  package?: IPackageConfig;
+  path?: IRuntimeProjectPathConfig;
+}
+
+export interface IRuntimeProjectPathConfig {
+  root?: string;
 }

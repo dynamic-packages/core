@@ -3,7 +3,11 @@ import { IDynamicPackage } from '@dynamics/core-types';
 
 class PackageManager extends AbstractPackageManager {
 
-  init(): void {
+  constructor(projectRoot: string) {
+    super();
+  }
+
+  discover(): void {
     //
   }
 

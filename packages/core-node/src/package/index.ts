@@ -1,7 +1,7 @@
-import NodePackageResolver from './NodePackageResolver';
-import PackageManager from './PackageManager';
+import NodePackageManager from './PackageManager';
+import NodePackageResolver from './PackageResolver';
 
 export {
+  NodePackageManager,
   NodePackageResolver,
-  PackageManager
 };

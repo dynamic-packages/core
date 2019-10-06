@@ -3,7 +3,7 @@ import { IDynamicPackage } from '@dynamics/core-types';
 
 class PackageManager extends AbstractPackageManager {
 
-  init(): void {
+  discover(): void {
     //
   }
 

@@ -1,7 +1,7 @@
-import PackageManager from './PackageManager';
-import WebPackageResolver from './WebPackageResolver';
+import WebPackageManager from './PackageManager';
+import WebPackageResolver from './PackageResolver';
 
 export {
-  PackageManager,
-  WebPackageResolver
+  WebPackageManager,
+  WebPackageResolver,
 };

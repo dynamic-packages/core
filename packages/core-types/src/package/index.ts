@@ -11,7 +11,7 @@ export interface IPackageNode {
 }
 
 export interface IPackageManager extends IBase {
-  init(): void;
+  discover(): void;
   install(pkg: IDynamicPackage): void;
   uninstall(pkg: IDynamicPackage): void;
   update(pkg: IDynamicPackage): void;
