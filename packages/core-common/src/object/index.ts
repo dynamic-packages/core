@@ -1,5 +1,7 @@
+import deepFreeze from './deepFreeze';
 import objectToString from './objectToString';
 
 export {
-  objectToString
+  deepFreeze,
+  objectToString,
 };
