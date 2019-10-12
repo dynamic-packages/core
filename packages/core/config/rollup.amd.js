@@ -3,6 +3,7 @@ import json from 'rollup-plugin-json';
 import license from 'rollup-plugin-license';
 import builtins from 'rollup-plugin-node-builtins';
 import resolve from 'rollup-plugin-node-resolve';
+import nodent from 'rollup-plugin-nodent';
 import { uglify } from 'rollup-plugin-uglify';
 
 export default {
@@ -20,6 +21,10 @@ export default {
     json(),
     resolve({
       preferBuiltins: true
+    }),
+    nodent({
+      promises: true,
+      noRuntime: true
     }),
     buble(),
     builtins(),
