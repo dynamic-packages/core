@@ -10,7 +10,7 @@ const config: IProjectConfig = {
     stopped: [],
   },
   path: {
-    root: ''
+    root: './'
   }
 };
 

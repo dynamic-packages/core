@@ -23,17 +23,24 @@ class Runtime extends Base {
   constructor(runtimeConfig: IRuntimeProjectConfig = {}) {
     super();
     this._runtimeCfg = runtimeConfig;
-    this._configLog(runtimeConfig);
   }
 
   @trace
-  start() {
+  async start() {
+    let project;
+    let packageManager;
     if (env === RuntimeEnv.NODE) {
-      const project = new NodeProject(this._runtimeCfg);
-      const { path } = project.getConfig();
-      this._loadPlugins(project, new NodePackageManager(path.root));
+      project = new NodeProject(this._runtimeCfg);
+      const { path } = await project.getConfig();
+      packageManager = new NodePackageManager(path.root);
     } else if (env === RuntimeEnv.WEB) {
-      this._loadPlugins(new WebProject(), new WebPackageManager());
+      project = new WebProject();
+      packageManager = new WebPackageManager();
+    }
+    if (project && packageManager) {
+      const { log } = await project.getConfig();
+      this._configLog(log.level);
+      this._loadPlugins(project, packageManager);
     }
   }
 
@@ -41,9 +48,8 @@ class Runtime extends Base {
     return '<Runtime>';
   }
 
-  private _configLog(runtimeCfg: IRuntimeProjectConfig) {
-    const { log } = runtimeCfg;
-    logger.level = log && log.level ? log.level : LoggerLevel.info;
+  private _configLog(logLevel: LoggerLevel) {
+    logger.level = logLevel;
     if (env === RuntimeEnv.NODE) {
       logger.printer = nodeLogPrinter;
     } else if (env === RuntimeEnv.WEB) {
@@ -51,7 +57,7 @@ class Runtime extends Base {
     }
   }
 
-  private _loadPlugins(project: IProject, packageManager: IPackageManager) {
+  private async _loadPlugins(project: IProject, packageManager: IPackageManager) {
     const pluginManager = new PluginManager();
     pluginManager.on('beforeActive', (plugin) => {
       if (plugin.name === '@dynamics/core') {

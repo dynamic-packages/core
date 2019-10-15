@@ -11,7 +11,7 @@ interface IPackageConfig {
 }
 
 export interface IProject {
-  getConfig: () => IProjectConfig;
+  getConfig: () => Promise<IProjectConfig>;
 }
 
 export interface IProjectConfig {
