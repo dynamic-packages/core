@@ -1,4 +1,4 @@
-import WebProject from './Project';
+import WebProject from './WebProject';
 
 export {
   WebProject

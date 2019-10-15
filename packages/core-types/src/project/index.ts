@@ -14,10 +14,8 @@ export interface IProject {
   getConfig: () => Promise<IProjectConfig>;
 }
 
-export interface IProjectConfig {
-  log: ILogConfig;
-  package: IPackageConfig;
-  path: IProjectPathConfig;
+export interface IProjectConfig extends IUserProjectConfig {
+  realPath: IProjectPathConfig;
 }
 
 export interface IProjectPathConfig {
@@ -32,4 +30,10 @@ export interface IRuntimeProjectConfig {
 
 export interface IRuntimeProjectPathConfig {
   root?: string;
+}
+
+export interface IUserProjectConfig {
+  log: ILogConfig;
+  package: IPackageConfig;
+  path: IProjectPathConfig;
 }

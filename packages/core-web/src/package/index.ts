@@ -1,5 +1,5 @@
-import WebPackageManager from './PackageManager';
 import WebPackageResolver from './PackageResolver';
+import WebPackageManager from './WebPackageManager';
 
 export {
   WebPackageManager,

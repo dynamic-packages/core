@@ -1,6 +1,6 @@
-import { IProjectConfig, LoggerLevel } from '@dynamics/core-types';
+import { IUserProjectConfig, LoggerLevel } from '@dynamics/core-types';
 
-const config: IProjectConfig = {
+const config: IUserProjectConfig = {
   log: {
     level: LoggerLevel.info
   },

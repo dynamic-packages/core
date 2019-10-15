@@ -1,4 +1,4 @@
-import NodeProject from './Project';
+import NodeProject from './NodeProject';
 
 export {
   NodeProject

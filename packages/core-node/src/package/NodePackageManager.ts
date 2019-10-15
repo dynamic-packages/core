@@ -1,10 +1,11 @@
-import { AbstractPackageManager } from '@dynamics/core-common';
+import { AbstractPackageManager, logger } from '@dynamics/core-common';
 import { IDynamicPackage } from '@dynamics/core-types';
 
-class PackageManager extends AbstractPackageManager {
+class NodePackageManager extends AbstractPackageManager {
 
   constructor(projectRoot: string) {
     super();
+    console.info('projectRoot', projectRoot);
   }
 
   discover(): void {
@@ -24,4 +25,4 @@ class PackageManager extends AbstractPackageManager {
   }
 }
 
-export default PackageManager;
+export default NodePackageManager;

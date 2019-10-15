@@ -8,7 +8,7 @@ declare function requirejs(moduleNames: string[], cb?: (modules: any) => void): 
 const CONFIG_FILE_NAME = 'dynamic.config.json';
 const CONFIG_FILE_NOT_FOUND = `${CONFIG_FILE_NAME} not found.`;
 
-class Project implements IProject {
+class WebProject implements IProject {
 
   private _config!: Promise<IProjectConfig>;
 
@@ -33,4 +33,4 @@ class Project implements IProject {
   }
 }
 
-export default Project;
+export default WebProject;

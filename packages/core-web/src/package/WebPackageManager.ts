@@ -1,7 +1,7 @@
 import { AbstractPackageManager } from '@dynamics/core-common';
 import { IDynamicPackage } from '@dynamics/core-types';
 
-class PackageManager extends AbstractPackageManager {
+class WebPackageManager extends AbstractPackageManager {
 
   discover(): void {
     //
@@ -20,4 +20,4 @@ class PackageManager extends AbstractPackageManager {
   }
 }
 
-export default PackageManager;
+export default WebPackageManager;

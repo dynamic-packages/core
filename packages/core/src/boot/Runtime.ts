@@ -31,15 +31,15 @@ class Runtime extends Base {
     let packageManager;
     if (env === RuntimeEnv.NODE) {
       project = new NodeProject(this._runtimeCfg);
-      const { path } = await project.getConfig();
-      packageManager = new NodePackageManager(path.root);
+      const { log, realPath } = await project.getConfig();
+      this._configLog(log.level);
+      packageManager = new NodePackageManager(realPath.root);
+      this._loadPlugins(project, packageManager);
     } else if (env === RuntimeEnv.WEB) {
       project = new WebProject();
-      packageManager = new WebPackageManager();
-    }
-    if (project && packageManager) {
       const { log } = await project.getConfig();
       this._configLog(log.level);
+      packageManager = new WebPackageManager();
       this._loadPlugins(project, packageManager);
     }
   }
