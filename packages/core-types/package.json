@@ -11,6 +11,8 @@
   "author": "ajaxlab7@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "tslib": "^1.10.0"
+    "package-json-type": "^1.0.3",
+    "tslib": "^1.10.0",
+    "walk-package-graph": "^0.1.1"
   }
 }

@@ -9,9 +9,9 @@ class NodePackageResolver implements IPackageResolver {
   resolve(): Promise<IPackageNode> {
     return new Promise((resolve) => {
       // TODO resolve root node
-      resolve({
-        children: []
-      });
+      // resolve({
+      //   children: []
+      // });
     });
   }
 }

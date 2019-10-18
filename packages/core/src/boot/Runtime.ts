@@ -7,7 +7,8 @@ import {
   nodeLogPrinter, NodePackageManager, NodeProject
 } from '@dynamics/core-node';
 import {
-  IPackageManager, IProject, IRuntimeProjectConfig,
+  IPackageManager, IPackageNode,
+  IProject, IRuntimeProjectConfig,
   LoggerLevel, RuntimeEnv
 } from '@dynamics/core-types';
 import {
@@ -65,8 +66,8 @@ class Runtime extends Base {
         plugin.context.publishService(packageManager);
       }
     });
-    packageManager.on('discover', (manifest) => {
-      pluginManager.createPlugin(manifest);
+    packageManager.on('discover', (node: IPackageNode) => {
+      pluginManager.createPlugin(node);
     });
     packageManager.discover();
   }

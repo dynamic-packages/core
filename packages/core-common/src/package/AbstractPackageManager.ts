@@ -7,6 +7,11 @@ abstract class AbstractPackageManager extends Base implements IPackageManager {
 
   abstract install(pkg: IDynamicPackage): void;
 
+  list() {
+    // TODO implement
+    return [];
+  }
+
   abstract uninstall(pkg: IDynamicPackage): void;
 
   abstract update(pkg: IDynamicPackage): void;

@@ -2,8 +2,14 @@
   "name": "simple",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "../../../packages/*"
+  ],
   "scripts": {
     "start": "node src/main.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@dynamics/core": "^0.1.0"
+  }
 }
