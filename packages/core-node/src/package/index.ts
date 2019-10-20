@@ -1,5 +1,5 @@
 import NodePackageManager from './NodePackageManager';
-import NodePackageResolver from './PackageResolver';
+import NodePackageResolver from './NodePackageResolver';
 
 export {
   NodePackageManager,

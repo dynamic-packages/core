@@ -12,23 +12,24 @@ class NodePackageManager extends AbstractPackageManager {
   }
 
   discover(): void {
-    logger.info('discovering dynamic packages ...', '%format');
     const packman = this;
     walkPackageGraph(this._projectRoot, {
-      onEnd() {
-        logger.info('end', '%spin_stop');
-      },
       onError(err) {
         logger.error(err);
       },
       onResolve(node) {
-        logger.info('{0} detected', node.id, '%format');
-        packman.emit('discover', node);
+        if (node.manifest.dynamic) {
+          logger.info('{0} detected', node.id, '%format');
+          // packman.packageRegistry_.addPackage(
+          //   new Package(node)
+          // );
+          packman.emit('discover', node);
+        }
       },
       onUnresolve(node, names) {
         logger.warn(
           '{0} has unresolved dependencies ({1})',
-          node.id, JSON.stringify(names),
+          node.id, names.join(','),
           '%format'
         );
       }

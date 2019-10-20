@@ -1,5 +1,9 @@
+import AbstractPackage from './AbstractPackage';
 import AbstractPackageManager from './AbstractPackageManager';
+import PackageRegistry from './PackageRegistry';
 
 export {
-  AbstractPackageManager
+  AbstractPackage,
+  AbstractPackageManager,
+  PackageRegistry,
 };

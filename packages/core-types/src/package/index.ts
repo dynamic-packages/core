@@ -1,11 +1,25 @@
 import { IDependencyMap, IPackageJson } from 'package-json-type';
 import { IPackageNode } from 'walk-package-graph';
-import { IBase, IFlag } from '../common';
+import { IBase, IFlag, IKeyString } from '../common';
 
 export type IPackageResolveHandler = (pkg: IDynamicPackage) => void;
 
+export interface IDynamicMeta {
+  activator?: string;
+  give_contributions: any;
+  receive_contributions: any;
+  state: any;
+  targets: any;
+}
+
 export interface IDynamicPackage extends IFlag {
-  // TODO
+  dependencies: IDynamicPackage[];
+  manifest: IPackageJson;
+}
+
+export interface IDynamicPackageJson extends IPackageJson {
+  dependencies: IKeyString;
+  dynamic: IDynamicMeta;
 }
 
 export {
