@@ -5,6 +5,7 @@ abstract class AbstractPackage extends Flag implements IDynamicPackage {
 
   constructor() {
     super();
+    const a: any = {};
   }
 }
 

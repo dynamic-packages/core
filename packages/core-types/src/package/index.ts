@@ -6,8 +6,8 @@ export type IPackageResolveHandler = (pkg: IDynamicPackage) => void;
 
 export interface IDynamicMeta {
   activator?: string;
-  give_contributions: any;
-  receive_contributions: any;
+  implements: any;
+  interface: any;
   state: any;
   targets: any;
 }

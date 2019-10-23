@@ -45,5 +45,21 @@
     "rollup-plugin-nodent": "^0.2.2",
     "rollup-plugin-uglify": "^6.0.2"
   },
-  "dynamic": {}
+  "dynamic": {
+    "implements": {
+      "services": [],
+      "extensions": []
+    },
+    "interface": {
+      "services": [
+        {
+          "id": "@dynamics/core:package-manager",
+          "description": "Manages dynamic packages",
+          "permission": {},
+          "specification": "./package-manager.ts"
+        }
+      ],
+      "extensions": []
+    }
+  }
 }
